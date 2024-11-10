@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>ML Prediction Diabetes</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Prediction Diabetes</h1>
+      <form action="{{url_for('predict')}}" method="post">
+        <!-- <div class="mb-3">
+          <label for="exampleFormControlInput1" class="form-label"></label>
+          <input
+            type="hidden"
+            value="1"
+            min="1"
+            name="Diabetes_binary"
+            class="form-control"
+            id="exampleFormControlInput1"
+          />
+        </div> -->
+        <div class="mb-3">
+          <label for="exampleFormControlInput1" class="form-label"
+            >HighBP</label
+          >
+          <input
+            type="text"
+            name="HighBP"
+            class="form-control"
+            id="exampleFormControlInput1"
+          />
+        </div>
+        <div class="mb-3">
+          <label for="exampleFormControlInput1" class="form-label"
+            >HighChol</label
+          >
+          <input
+            type="text"
+            name="HighChol"
+            class="form-control"
+            id="exampleFormControlInput1"
+          />
+        </div>
+        <div class="mb-3">
+          <label for="exampleFormControlInput1" class="form-label"
+            >CholCheck</label
+          >
+          <input
+            type="text"
+            name="CholCheck"
+            class="form-control"
+            id="exampleFormControlInput1"
+          />
+        </div>
+        <div class="mb-3">
+          <label for="exampleFormControlInput1" class="form-label">BMI</label>
+          <input
+            type="text"
+            name="BMI"
+            class="form-control"
+            id="exampleFormControlInput1"
+          />
+        </div>
+        <div class="mb-3">
+          <label for="exampleFormControlInput1" class="form-label"
+            >Stroke</label
+          >
+          <input
+            type="text"
+            name="Stroke"
+            class="form-control"
+            id="exampleFormControlInput1"
+          />
+        </div>
+        <div class="mb-3">
+          <label for="exampleFormControlInput1" class="form-label"
+            >HeartDiseaseorAttack</label
+          >
+          <input
+            type="text"
+            name="HeartDiseaseorAttack"
+            class="form-control"
+            id="exampleFormControlInput1"
+          />
+        </div>
+        <div class="mb-3">
+          <label for="exampleFormControlInput1" class="form-label"
+            >PhysActivity</label
+          >
+          <input
+            type="text"
+            name="PhysActivity"
+            class="form-control"
+            id="exampleFormControlInput1"
+          />
+        </div>
+        <div class="mb-3">
+          <label for="exampleFormControlInput1" class="form-label"
+            >GenHlth</label
+          >
+          <input
+            type="text"
+            name="GenHlth"
+            class="form-control"
+            id="exampleFormControlInput1"
+          />
+        </div>
+        <div class="mb-3">
+          <label for="exampleFormControlInput1" class="form-label"
+            >PhysHlth</label
+          >
+          <input
+            type="text"
+            name="PhysHlth"
+            class="form-control"
+            id="exampleFormControlInput1"
+          />
+        </div>
+        <div class="mb-3">
+          <label for="exampleFormControlInput1" class="form-label"
+            >DiffWalk</label
+          >
+          <input
+            type="text"
+            name="DiffWalk"
+            class="form-control"
+            id="exampleFormControlInput1"
+          />
+        </div>
+        <div class="mb-3">
+          <label for="exampleFormControlInput1" class="form-label">Age</label>
+          <input
+            type="text"
+            name="Age"
+            class="form-control"
+            id="exampleFormControlInput1"
+          />
+        </div>
+        <div class="mb-3">
+          <label for="exampleFormControlInput1" class="form-label"
+            >Education</label
+          >
+          <input
+            type="text"
+            name="Education"
+            class="form-control"
+            id="exampleFormControlInput1"
+          />
+        </div>
+        <div class="mb-3">
+          <label for="exampleFormControlInput1" class="form-label"
+            >Income</label
+          >
+          <input
+            type="text"
+            name="Income"
+            class="form-control"
+            id="exampleFormControlInput1"
+          />
+        </div>
+        <button
+          type="submit"
+          class="btn btn-primary btn-block btn-large text-center"
+        >
+          Run</button
+        ><br /><br />
+      </form>
+      <br /><br />
+      {{ prediction_text }}
+    </div>
+    <br /><br />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
